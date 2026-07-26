@@ -1,0 +1,110 @@
+import { motion } from "framer-motion";
+import {
+  FaUserGraduate,
+  FaHandsHelping,
+  FaLightbulb,
+  FaBasketballBall,
+} from "react-icons/fa";
+
+import estudiantes from "../assets/estudiantes.avif";
+import "./css/Razon.css";
+
+function Razon() {
+  const razones = [
+    {
+      icon: <FaUserGraduate />,
+      title: "Formación en valores",
+    },
+    {
+      icon: <FaHandsHelping />,
+      title: "Acompañamiento personalizado",
+    },
+    {
+      icon: <FaLightbulb />,
+      title: "Innovación educativa",
+    },
+    {
+      icon: <FaBasketballBall />,
+      title: "Actividades integrales",
+    },
+  ];
+
+  return (
+    <section className="razon">
+
+      <motion.div
+        className="razon-imagen"
+        initial={{ opacity: 0, x: -80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: .8 }}
+      >
+        <img src={estudiantes} alt="Estudiantes" />
+      </motion.div>
+
+      <div className="razon-contenido">
+
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          ¿Por qué elegirnos?
+        </motion.h2>
+
+        <div className="razones-grid">
+          {razones.map((item, index) => (
+            <motion.div
+              key={index}
+              className="razon-card"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * .15 }}
+              whileHover={{
+                y: -8,
+              }}
+            >
+              <div className="icono">
+                {item.icon}
+              </div>
+
+              <h4>{item.title}</h4>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="estadisticas">
+
+          <motion.div
+            className="stat-card"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3>500+</h3>
+            <p>Estudiantes activos</p>
+          </motion.div>
+
+          <motion.div
+            className="stat-card"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3>30+</h3>
+            <p>Docentes comprometidos</p>
+          </motion.div>
+
+          <motion.div
+            className="stat-card"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3>15+</h3>
+            <p>Años formando estudiantes</p>
+          </motion.div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+export default Razon;

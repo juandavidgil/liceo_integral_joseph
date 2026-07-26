@@ -1,0 +1,147 @@
+.formacion{
+    padding:120px 8%;
+    background:#ffffff;
+}
+
+.formacion-header{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 70px;
+}
+
+.formacion-header h2{
+    font-size:3rem;
+    color:#1e3a8a;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.formacion-header p{
+    color:#64748b;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.areas-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.area-card{
+    position:relative;
+    overflow:hidden;
+
+    height:320px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.12);
+
+    transition:.4s;
+}
+
+.area-card:hover{
+    transform:translateY(-10px);
+}
+
+.area-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.area-card:hover img{
+    transform:scale(1.12);
+}
+
+/* EFECTO BRILLO */
+
+.area-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+    left:-100%;
+
+    width:200%;
+    height:200%;
+
+    background:linear-gradient(
+        45deg,
+        transparent,
+        rgba(255,255,255,.2),
+        transparent
+    );
+
+    transition:.8s;
+
+    z-index:2;
+}
+
+.area-card:hover::before{
+    top:100%;
+    left:100%;
+}
+
+/* OVERLAY */
+
+.area-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:25px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.25),
+        transparent
+    );
+
+    z-index:3;
+}
+
+.area-overlay h3{
+    color:white;
+    font-size:1.4rem;
+    font-weight:600;
+    margin:0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .areas-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .formacion{
+        padding:80px 6%;
+    }
+
+    .formacion-header h2{
+        font-size:2.2rem;
+    }
+
+    .areas-grid{
+        grid-template-columns:1fr;
+    }
+
+    .area-card{
+        height:280px;
+    }
+}

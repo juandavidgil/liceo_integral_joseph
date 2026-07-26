@@ -1,0 +1,157 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --primary:#1E3A8A;
+  --secondary:#2563EB;
+  --white:#ffffff;
+  --text:#1f2937;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:0 7%;
+
+  z-index:1000;
+
+  background:rgba(255,255,255,0.85);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(255,255,255,.3);
+
+  transition:.4s ease;
+}
+
+.logo{
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--primary);
+  cursor:pointer;
+}
+
+.nav-links{
+  display:flex;
+  gap:35px;
+  list-style:none;
+}
+
+.nav-links a{
+  position:relative;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:var(--secondary);
+}
+
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-8px;
+
+  width:0;
+  height:3px;
+
+  border-radius:10px;
+  background:linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  transition:.35s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+.active-link{
+  color:var(--secondary)!important;
+}
+
+.active-link::after{
+  width:100% !important;
+}
+
+.contact-btn{
+  border:none;
+  cursor:pointer;
+
+  padding:12px 24px;
+
+  border-radius:30px;
+
+  background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  color:white;
+  font-weight:600;
+
+  transition:.4s;
+}
+
+.contact-btn:hover{
+  box-shadow:
+    0 10px 25px rgba(37,99,235,.35);
+}
+
+/* ANIMACIÓN LOGO */
+
+.logo span{
+  position:relative;
+}
+
+.logo span::after{
+  content:'';
+  position:absolute;
+
+  left:0;
+  bottom:-5px;
+
+  width:100%;
+  height:3px;
+
+  background:linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  transform:scaleX(0);
+  transform-origin:left;
+
+  animation:logoLine 1.2s ease forwards;
+  animation-delay:.8s;
+}
+
+@keyframes logoLine{
+  to{
+    transform:scaleX(1);
+  }
+}
