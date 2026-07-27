@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import colegio from "../assets/fachada.jpeg";
+import colegio from "../assets/hero.jpeg";
 import "./css/Hero.css";
 
 function Hero() {

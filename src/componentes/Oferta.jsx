@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import oferta from "../assets/oferta.avif";
+import oferta from "../assets/formation.jpeg";
 import "./css/Oferta.css";
 
 function Oferta() {

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-import matematicas from "../assets/matematicas.avif";
+import matematicas from "../assets/matematicas.jpeg";
 import lengua from "../assets/lengua_castellana.avif";
-import ciencias from "../assets/ciencias.avif";
+import ciencias from "../assets/ciencias.jpeg";
 import sociales from "../assets/sociales.jpg";
-import artes from "../assets/artes.jpg";
+import artes from "../assets/artes.jpeg";
 import fisica from "../assets/fisica.avif";
 
 import "./css/Areas.css";

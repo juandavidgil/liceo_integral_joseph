@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import nosotros from "../assets/nosotros.jpeg"
+import proposito from "../assets/proposito.jpeg"
 import "./css/Nosotros.css";
 
 function Nosotros() {
@@ -29,7 +31,7 @@ function Nosotros() {
       >
         <div className="info-image">
           <img
-            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200"
+            src={nosotros}
             alt="Visión"
           />
         </div>
@@ -73,7 +75,7 @@ function Nosotros() {
 
         <div className="info-image">
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200"
+            src={proposito}
             alt="Misión"
           />
         </div>

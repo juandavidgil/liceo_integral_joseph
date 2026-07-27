@@ -6,7 +6,7 @@ import {
   FaBasketballBall,
 } from "react-icons/fa";
 
-import estudiantes from "../assets/estudiantes.avif";
+import estudiantes from "../assets/why_us.jpeg";
 import "./css/Razon.css";
 
 function Razon() {

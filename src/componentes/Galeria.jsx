@@ -1,14 +1,20 @@
 import { motion } from "framer-motion";
+import photo_1 from "../assets/gallery-1.jpeg"
+import photo_2 from "../assets/gallery-2.jpeg"
+import photo_3 from "../assets/gallery-3.jpeg"
+import photo_4 from "../assets/gallery-4.jpeg"
+import photo_5 from "../assets/gallery-5.jpeg"
+import photo_6 from "../assets/gallery-6.jpeg"
 import "./css/Galeria.css";
 
 function Galeria() {
   const imagenes = [
-    "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800",
-    "https://images.unsplash.com/photo-1588072432836-e10032774350?w=800",
-    "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800",
-    "https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800",
-    "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800",
-    "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800",
+    photo_5,
+    photo_1,
+    photo_3,
+    photo_6,
+    photo_2,
+    photo_4,
   ];
 
   return (
