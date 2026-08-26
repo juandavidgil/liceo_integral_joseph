@@ -18,7 +18,7 @@ function Galeria() {
   ];
 
   return (
-    <section className="galeria">
+    <section className="galeria" id="galeria">
 
       <motion.div
         className="galeria-header"

@@ -7,6 +7,15 @@ import {
 import "./css/Footer.css";
 
 function Footer() {
+    const WhatsApp = () => {
+
+    const numero = "573197032824";
+    const mensaje = `¡Hola Liceo Integral Joseph! Me gustaría realizar una consulta por favor`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+    onClose();
+
+  }
   return (
     <footer className="footer">
 
@@ -33,25 +42,18 @@ function Footer() {
         <div className="footer-contact">
           <h4>Contacto</h4>
 
-          <p>📍 Vallecito, Tolima</p>
-          <p>📞 +57 300 123 4567</p>
-          <p>✉ info@liceojoseph.edu.co</p>
+          <p>📍 Cra. 6 # 14-51, Soacha, Cundinamarca</p>
+          <p>📞 +57 319 7032824</p>
+          <p>✉ ginapaolabc@gmail.com</p>
         </div>
 
         <div className="footer-social">
-          <h4>Síguenos</h4>
+       
 
           <div className="social-icons">
-            <a href="#">
-              <FaFacebookF />
-            </a>
 
-            <a href="#">
-              <FaInstagram />
-            </a>
-
-            <a href="#">
-              <FaWhatsapp />
+            <a onClick={WhatsApp}>
+              <FaWhatsapp size={35}/>
             </a>
           </div>
         </div>

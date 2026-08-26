@@ -4,7 +4,7 @@ import "./css/Oferta.css";
 
 function Oferta() {
   return (
-    <section className="oferta">
+    <section className="oferta" id="oferta">
 
       <motion.div
         className="oferta-title"

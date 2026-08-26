@@ -2,6 +2,17 @@ import "./css/Contacto.css";
 import { motion } from "framer-motion";
 
 function Contacto() {
+
+  const WhatsApp = () => {
+
+    const numero = "573197032824";
+    const mensaje = `¡Hola Liceo Integral Joseph! Me gustaría realizar una consulta por favor`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+    onClose();
+
+  }
+  
   return (
     <section className="contacto" id="contacto">
 
@@ -58,17 +69,17 @@ function Contacto() {
 
             <div className="contacto-item">
               <h4>Teléfono</h4>
-              <p>+57 300 123 4567</p>
+              <p>+57 319 7032824</p>
             </div>
 
             <div className="contacto-item">
               <h4>Correo</h4>
-              <p>contacto@liceojoseph.edu.co</p>
+              <p>ginapaolabc@gmail.com</p>
             </div>
 
             <div className="contacto-item">
               <h4>Ubicación</h4>
-              <p>Liceo Integral Joseph</p>
+              <p>Cra. 6 # 14-51, Soacha, Cundinamarca</p>
             </div>
 
           </div>
@@ -76,7 +87,13 @@ function Contacto() {
           <div className="contacto-buttons">
 
             <motion.a
-              href="mailto:contacto@liceojoseph.edu.co"
+
+
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ginapaolabc@gmail.com&su=Información%20sobre%20sus%20servicios&body=Hola%20Liceo%20Integral%20Joseph%2C%20quisiera%20recibir%20más%20información%20sobre%20sus%20servicios.%20Muchas%20gracias."
+              target="_blank"
+              rel="noopener noreferrer"
+
+
               className="btn-primary"
               whileHover={{
                 scale: 1.05,
@@ -90,7 +107,7 @@ function Contacto() {
             </motion.a>
 
             <motion.a
-              href="https://wa.me/573001234567"
+              onClick={WhatsApp}
               target="_blank"
               rel="noreferrer"
               className="btn-secondary"
@@ -110,74 +127,20 @@ function Contacto() {
           <div className="map-container">
 
             <iframe
-              title="Mapa"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.825073813314!2d-74.1175202!3d4.5312686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3fa219afe985c1%3A0x7a7fdf807ebfc91a!2sColegio%20Juan%20Luis%20Londo%C3%B1o%20IED%20-%20La%20Salle!5e0!3m2!1ses!2sco!4v1715980000000"
-              allowFullScreen
-              loading="lazy"
-            />
+  src="https://www.google.com/maps?q=Cra.%206%20%2314-51,%20Soacha,%20Cundinamarca&output=embed"
+  width="100%"
+  height="550"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+></iframe>
 
           </div>
 
         </motion.div>
 
-        <motion.form
-          className="contacto-form glass-card"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
 
-          <div className="form-top">
-            <h3>Envíanos un mensaje</h3>
-
-            <p>
-              Completa el formulario y nos pondremos
-              en contacto contigo lo antes posible.
-            </p>
-          </div>
-
-          <div className="input-group">
-            <label>Nombre completo</label>
-
-            <input
-              type="text"
-              placeholder="Ingrese su nombre completo"
-            />
-          </div>
-
-          <div className="input-group">
-            <label>Correo electrónico</label>
-
-            <input
-              type="email"
-              placeholder="Ingrese su correo electrónico"
-            />
-          </div>
-
-          <div className="input-group">
-            <label>Mensaje</label>
-
-            <textarea
-              rows="6"
-              placeholder="Ingrese su mensaje"
-            />
-          </div>
-
-          <motion.button
-            type="submit"
-            className="submit-btn"
-            whileHover={{
-              scale: 1.03
-            }}
-            whileTap={{
-              scale: 0.95
-            }}
-          >
-            Enviar mensaje
-          </motion.button>
-
-        </motion.form>
 
       </div>
     </section>

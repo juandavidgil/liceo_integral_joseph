@@ -38,7 +38,7 @@ function Areas() {
   ];
 
   return (
-    <section className="formacion">
+    <section className="areas" id="areas">
 
       <motion.div
         className="formacion-header"

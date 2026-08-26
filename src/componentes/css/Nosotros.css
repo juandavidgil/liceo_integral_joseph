@@ -1,109 +1,503 @@
-.nosotros{
-    padding:120px 8%;
-    background:#f8fafc;
+.nosotros {
+    padding: 120px 8%;
+    background: #f8fafc;
 }
 
-.nosotros-header{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-    margin-bottom:80px;
+.nosotros-header {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 80px;
 }
 
-.nosotros-header h2{
-    font-size:3rem;
-    color:#1e3a8a;
-    margin-bottom:20px;
+.nosotros-header h2 {
+    font-size: 3rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
 }
 
-.nosotros-header p{
-    color:#64748b;
-    line-height:1.8;
+.nosotros-header p {
+    color: #64748b;
+    line-height: 1.8;
 }
 
-.info-card{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
 
-    margin-bottom:100px;
+/* =========================
+   MISIÓN Y VISIÓN
+========================= */
+
+.info-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+
+    margin-bottom: 100px;
 }
 
-.reverse{
-    margin-bottom:0;
+.reverse {
+    margin-bottom: 0;
 }
 
-.info-image{
-    overflow:hidden;
-    border-radius:25px;
+.info-image {
+    overflow: hidden;
+    border-radius: 25px;
 }
 
-.info-image img{
-    width:100%;
-    height:450px;
-    object-fit:cover;
+.info-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
 
-    border-radius:25px;
+    border-radius: 25px;
 
-    transition:.6s;
+    transition: 0.6s;
 }
 
-.info-image:hover img{
-    transform:scale(1.08);
+.info-image:hover img {
+    transform: scale(1.08);
 }
 
-.info-content span{
-    display:inline-block;
+.info-content span {
+    display: inline-block;
 
-    padding:8px 18px;
+    padding: 8px 18px;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    background:#dbeafe;
-    color:#2563eb;
+    background: #dbeafe;
+    color: #2563eb;
 
-    font-weight:600;
+    font-weight: 600;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
-.info-content h3{
-    font-size:2.3rem;
-    color:#1e3a8a;
+.info-content h3 {
+    font-size: 2.3rem;
+    color: #1e3a8a;
 
-    margin-bottom:25px;
+    margin-bottom: 25px;
 }
 
-.info-content p{
-    color:#475569;
-    line-height:2;
-    font-size:1.05rem;
+.info-content p {
+    color: #475569;
+    line-height: 2;
+    font-size: 1.05rem;
 }
 
-@media(max-width:992px){
+
+/* =========================
+   FILOSOFÍA
+========================= */
+
+.filosofia {
+    max-width: 1000px;
+    margin: 120px auto 0;
+
+    padding: 65px 70px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(30, 58, 138, 0.08);
+
+    text-align: center;
+}
+
+.filosofia-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.filosofia-content span,
+.principios-header span,
+.espiritualidad-content span,
+.perfil-header span {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.filosofia-content h3 {
+    font-size: 2.3rem;
+
+    color: #1e3a8a;
+
+    margin-bottom: 25px;
+}
+
+.filosofia-content p {
+    color: #475569;
+
+    line-height: 2;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   PRINCIPIOS
+========================= */
+
+.principios {
+    margin-top: 120px;
+}
+
+.principios-header {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 60px;
+}
+
+.principios-header h3 {
+    font-size: 2.3rem;
+
+    color: #1e3a8a;
+
+    margin-bottom: 20px;
+}
+
+.principios-header p {
+    color: #64748b;
+
+    line-height: 1.8;
+
+    font-size: 1.05rem;
+}
+
+.principios-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.principio-card {
+    position: relative;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.principio-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.1);
+}
+
+.principio-number {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+}
+
+.principio-card h4 {
+    color: #1e3a8a;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 12px;
+}
+
+.principio-card p {
+    color: #475569;
+
+    line-height: 1.7;
+
+    font-size: 0.95rem;
+
+    margin: 0;
+}
+
+
+/* =========================
+   FUNDAMENTACIÓN ESPIRITUAL
+========================= */
+
+.espiritualidad {
+    max-width: 1000px;
+
+    margin: 120px auto 0;
+
+    padding: 65px 70px;
+
+    background: #dbeafe;
+
+    border-radius: 25px;
+
+    text-align: center;
+}
+
+.espiritualidad-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.espiritualidad-content span {
+    background: #ffffff;
+
+    color: #2563eb;
+}
+
+.espiritualidad-content h3 {
+    font-size: 2.3rem;
+
+    color: #1e3a8a;
+
+    margin-bottom: 25px;
+}
+
+.espiritualidad-content p {
+    color: #334155;
+
+    line-height: 2;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   PERFIL DEL ESTUDIANTE
+========================= */
+
+.perfil-estudiante {
+    max-width: 1000px;
+
+    margin: 120px auto 0;
+}
+
+.perfil-header {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.perfil-header h3 {
+    font-size: 2.3rem;
+
+    color: #1e3a8a;
+
+    margin-bottom: 20px;
+}
+
+.perfil-content {
+    padding: 40px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.perfil-content h4 {
+    color: #1e3a8a;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 25px;
+}
+
+.perfil-content ul {
+    padding-left: 20px;
+
+    margin: 0;
+}
+
+.perfil-content li {
+    color: #475569;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+    padding-left: 5px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
 
     .info-card,
-    .reverse{
-        grid-template-columns:1fr;
+    .reverse {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
     }
 
-    .reverse .info-image{
-        order:-1;
+    .reverse .info-image {
+        order: -1;
+    }
+
+    .principios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filosofia,
+    .espiritualidad,
+    .perfil-estudiante {
+        margin-top: 90px;
     }
 }
 
-@media(max-width:768px){
 
-    .nosotros-header h2{
-        font-size:2.3rem;
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 768px) {
+
+    .nosotros {
+        padding: 90px 6%;
     }
 
-    .info-content h3{
-        font-size:1.8rem;
+    .nosotros-header {
+        margin-bottom: 60px;
     }
 
-    .info-image img{
-        height:300px;
+    .nosotros-header h2 {
+        font-size: 2.3rem;
+    }
+
+    .info-card {
+        margin-bottom: 70px;
+    }
+
+    .info-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .info-content p {
+        font-size: 1rem;
+
+        line-height: 1.8;
+    }
+
+    .info-image img {
+        height: 300px;
+    }
+
+    .filosofia,
+    .espiritualidad {
+        padding: 40px 25px;
+
+        margin-top: 80px;
+    }
+
+    .filosofia-content h3,
+    .espiritualidad-content h3,
+    .principios-header h3,
+    .perfil-header h3 {
+        font-size: 1.8rem;
+    }
+
+    .principios {
+        margin-top: 80px;
+    }
+
+    .principios-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .principio-card {
+        padding: 25px;
+    }
+
+    .perfil-estudiante {
+        margin-top: 80px;
+    }
+
+    .perfil-content {
+        padding: 30px 25px;
+    }
+}
+
+
+/* =========================
+   MÓVIL PEQUEÑO
+========================= */
+
+@media (max-width: 480px) {
+
+    .nosotros {
+        padding: 70px 5%;
+    }
+
+    .nosotros-header h2 {
+        font-size: 2rem;
+    }
+
+    .info-image img {
+        height: 250px;
+    }
+
+    .filosofia,
+    .espiritualidad {
+        padding: 35px 20px;
+
+        border-radius: 20px;
+    }
+
+    .principio-card {
+        padding: 22px;
+    }
+
+    .perfil-content {
+        padding: 25px 20px;
     }
 }

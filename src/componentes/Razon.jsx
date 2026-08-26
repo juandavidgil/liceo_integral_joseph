@@ -30,7 +30,7 @@ function Razon() {
   ];
 
   return (
-    <section className="razon">
+    <section className="razon" id="razon" >
 
       <motion.div
         className="razon-imagen"

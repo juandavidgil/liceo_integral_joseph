@@ -1,17 +1,28 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./css/Navbar.css";
 
 function Navbar() {
   const navItems = [
-    { name: "Inicio", path: "/" },
-    { name: "Razón", path: "/razon" },
-    { name: "Oferta", path: "/oferta" },
-    { name: "Áreas", path: "/areas" },
-    { name: "Nosotros", path: "/nosotros" },
-    { name: "Contacto", path: "/contacto" },
+    { name: "Inicio", path: "#inicio" },
+    { name: "Razón", path: "#razon" },
+    { name: "Oferta", path: "#oferta" },
+    { name: "Áreas", path: "#areas" },
+    { name: "Nosotros", path: "#nosotros" },
+    { name: "Galeria", path: "#galeria" },
+    { name: "Contacto", path: "#contacto" },
   ];
+
+  const WhatsApp = () => {
+    const numero = "573197032824";
+
+    const mensaje =
+      "¡Hola Liceo Integral Joseph! Me gustaría realizar una consulta, por favor.";
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
+  };
 
   return (
     <motion.header
@@ -33,20 +44,15 @@ function Navbar() {
         <ul className="nav-links">
           {navItems.map((item) => (
             <li key={item.name}>
-              <ul
-                to={item.path}
-                className={({ isActive }) =>
-                  isActive ? "active-link" : ""
-                }
-              >
-                {item.name}
-              </ul>
+              <a href={item.path}>{item.name}</a>
             </li>
           ))}
         </ul>
       </nav>
 
       <motion.button
+        type="button"
+        onClick={WhatsApp}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="contact-btn"

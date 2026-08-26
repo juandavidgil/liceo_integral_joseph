@@ -4,7 +4,7 @@ import "./css/Hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="inicio">
 
       <div className="hero-overlay"></div>
 
@@ -59,13 +59,18 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 0.8,
-            delay: 1
+            delay: 1,
           }}
           whileHover={{
-            scale: 1.05
+            scale: 1.05,
           }}
           whileTap={{
-            scale: 0.95
+            scale: 0.95,
+          }}
+          onClick={() => {
+            document.getElementById("nosotros")?.scrollIntoView({
+              behavior: "smooth",
+            });
           }}
         >
           Conoce nuestra institución
