@@ -60,7 +60,10 @@
     transform:scale(1.12);
 }
 
-/* EFECTO BRILLO */
+
+/* =========================
+   EFECTO BRILLO
+========================= */
 
 .area-card::before{
     content:"";
@@ -90,7 +93,10 @@
     left:100%;
 }
 
-/* OVERLAY */
+
+/* =========================
+   OVERLAY
+========================= */
 
 .area-overlay{
     position:absolute;
@@ -118,7 +124,19 @@
     margin:0;
 }
 
-/* RESPONSIVE */
+
+/* =========================
+   SERVICIOS COMPLEMENTARIOS
+========================= */
+
+.servicios-header{
+    margin-top:120px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:992px){
 
@@ -126,6 +144,7 @@
         grid-template-columns:repeat(2,1fr);
     }
 }
+
 
 @media(max-width:768px){
 
@@ -143,5 +162,9 @@
 
     .area-card{
         height:280px;
+    }
+
+    .servicios-header{
+        margin-top:80px;
     }
 }
