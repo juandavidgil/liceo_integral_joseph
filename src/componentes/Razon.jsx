@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaUserGraduate,
@@ -8,6 +9,34 @@ import {
 
 import estudiantes from "../assets/why_us.jpeg";
 import "./css/Razon.css";
+
+function Contador({ valor, duracion = 2000 }) {
+  const [contador, setContador] = useState(0);
+
+  useEffect(() => {
+    let inicio = null;
+
+    const animar = (timestamp) => {
+      if (!inicio) inicio = timestamp;
+
+      const progreso = timestamp - inicio;
+      const porcentaje = Math.min(progreso / duracion, 1);
+
+      // Easing para que el contador desacelere al final
+      const easeOut = 1 - Math.pow(1 - porcentaje, 3);
+
+      setContador(Math.floor(easeOut * valor));
+
+      if (porcentaje < 1) {
+        requestAnimationFrame(animar);
+      }
+    };
+
+    requestAnimationFrame(animar);
+  }, [valor, duracion]);
+
+  return <>{contador}+</>;
+}
 
 function Razon() {
   const razones = [
@@ -30,14 +59,14 @@ function Razon() {
   ];
 
   return (
-    <section className="razon" id="razon" >
+    <section className="razon" id="razon">
 
       <motion.div
         className="razon-imagen"
         initial={{ opacity: 0, x: -80 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: .8 }}
+        transition={{ duration: 0.8 }}
       >
         <img src={estudiantes} alt="Estudiantes" />
       </motion.div>
@@ -60,7 +89,7 @@ function Razon() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * .15 }}
+              transition={{ delay: index * 0.15 }}
               whileHover={{
                 y: -8,
               }}
@@ -80,7 +109,9 @@ function Razon() {
             className="stat-card"
             whileHover={{ scale: 1.05 }}
           >
-            <h3>500+</h3>
+            <h3>
+              <Contador valor={500} />
+            </h3>
             <p>Estudiantes activos</p>
           </motion.div>
 
@@ -88,7 +119,9 @@ function Razon() {
             className="stat-card"
             whileHover={{ scale: 1.05 }}
           >
-            <h3>30+</h3>
+            <h3>
+              <Contador valor={30} />
+            </h3>
             <p>Docentes comprometidos</p>
           </motion.div>
 
@@ -96,7 +129,9 @@ function Razon() {
             className="stat-card"
             whileHover={{ scale: 1.05 }}
           >
-            <h3>15+</h3>
+            <h3>
+              <Contador valor={15} />
+            </h3>
             <p>Años formando estudiantes</p>
           </motion.div>
 

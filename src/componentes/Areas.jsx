@@ -6,7 +6,14 @@ import ciencias from "../assets/ciencias.jpeg";
 import sociales from "../assets/sociales.jpg";
 import artes from "../assets/artes.jpeg";
 import fisica from "../assets/fisica.avif";
-
+import ingles from "../assets/ingles.avif";
+import religion from "../assets/religion.avif";
+import etica from "../assets/etica.avif";
+import danzas from "../assets/danzas.jpg";
+import emprender from "../assets/emprender.jpg";
+import jornada from "../assets/jornada.jpg";
+import almuerzo from "../assets/almuerzo.jpg";
+import extracurricular from "../assets/taekwondo.jpg";
 import "./css/Areas.css";
 
 function Areas() {
@@ -29,7 +36,7 @@ function Areas() {
     },
     {
       nombre: "Inglés",
-      imagen: lengua,
+      imagen: ingles,
     },
     {
       nombre: "Artes",
@@ -41,30 +48,30 @@ function Areas() {
     },
     {
       nombre: "Danzas",
-      imagen: artes,
+      imagen: danzas,
     },
     {
       nombre: "Ética",
-      imagen: sociales,
+      imagen: etica,
     },
     {
       nombre: "Religión",
-      imagen: sociales,
+      imagen: religion,
     },
     {
       nombre: "Emprendimiento",
-      imagen: matematicas,
+      imagen: emprender,
     },
   ];
 
   const servicios = [
     {
       nombre: "Clases Extracurriculares en Ballet y Taekwondo",
-      imagen: fisica,
+      imagen: extracurricular,
     },
     {
       nombre: "Servicio de Almuerzo",
-      imagen: ciencias,
+      imagen: almuerzo,
     },
     {
       nombre: "Cooperativa",
@@ -76,7 +83,7 @@ function Areas() {
     },
     {
       nombre: "Jornada Extendida",
-      imagen: artes,
+      imagen: jornada,
     },
   ];
 
