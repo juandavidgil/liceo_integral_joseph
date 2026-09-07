@@ -308,10 +308,14 @@
    PERFIL DEL ESTUDIANTE
 ========================= */
 
-.perfil-estudiante {
-    max-width: 1000px;
+.perfiles-estudiante {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-top: 80px;
+}
 
-    margin: 120px auto 0;
+.perfil-estudiante {
+    margin-top: 0;
 }
 
 .perfil-header {
@@ -364,6 +368,25 @@
     padding-left: 5px;
 }
 
+/* =========================
+   PERFILES DEL ESTUDIANTE
+========================= */
+
+.perfiles-estudiante {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 120px;
+}
+
+.perfiles-estudiante .perfil-estudiante {
+    max-width: none;
+
+    margin-top: 0;
+}
 
 /* =========================
    TABLET
@@ -386,11 +409,15 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .filosofia,
-    .espiritualidad,
-    .perfil-estudiante {
-        margin-top: 90px;
-    }
+   .filosofia,
+.espiritualidad,
+.perfil-estudiante {
+    margin-top: 90px;
+}
+
+.perfiles-estudiante {
+    grid-template-columns: 1fr;
+}
 }
 
 

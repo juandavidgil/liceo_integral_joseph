@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
 
 import matematicas from "../assets/matematicas.jpeg";
-import lengua from "../assets/lengua_castellana.avif";
+import lengua from "../assets/lengua_castellana.jpeg";
 import ciencias from "../assets/ciencias.jpeg";
-import sociales from "../assets/sociales.jpg";
+import sociales from "../assets/sociales.jpeg";
 import artes from "../assets/artes.jpeg";
-import fisica from "../assets/fisica.avif";
-import ingles from "../assets/ingles.avif";
-import religion from "../assets/religion.avif";
-import etica from "../assets/etica.avif";
-import danzas from "../assets/danzas.jpg";
-import emprender from "../assets/emprender.jpg";
-import jornada from "../assets/jornada.jpg";
+import fisica from "../assets/fisica.jpeg";
+import ingles from "../assets/ingles.jpeg";
+import religion from "../assets/religion.jpeg";
+import etica from "../assets/etica.jpeg";
+import danzas from "../assets/danzas.jpeg";
+import emprender from "../assets/emprendimiento.jpeg";
+import jornada from "../assets/jornada.jpeg";
 import almuerzo from "../assets/almuerzo.jpg";
-import extracurricular from "../assets/taekwondo.jpg";
+import extracurricular from "../assets/taekwondo.jpeg";
+import refuerzo from "../assets/refuerzo.jpeg"
+import coperativa from "../assets/coperativa.jpeg"
 import "./css/Areas.css";
 
 function Areas() {
@@ -75,11 +77,11 @@ function Areas() {
     },
     {
       nombre: "Cooperativa",
-      imagen: sociales,
+      imagen: coperativa,
     },
     {
       nombre: "Refuerzos",
-      imagen: lengua,
+      imagen: refuerzo,
     },
     {
       nombre: "Jornada Extendida",

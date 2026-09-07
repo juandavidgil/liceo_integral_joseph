@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+
 import nosotros from "../assets/nosotros.jpeg";
 import proposito from "../assets/proposito.jpeg";
+
 import "./css/Nosotros.css";
 
 function Nosotros() {
@@ -84,7 +86,10 @@ function Nosotros() {
 
   return (
     <section className="nosotros" id="nosotros">
-      {/* HEADER */}
+
+      {/* =========================
+          HEADER
+      ========================= */}
 
       <motion.div
         className="nosotros-header"
@@ -100,7 +105,10 @@ function Nosotros() {
         </p>
       </motion.div>
 
-      {/* VISIÓN */}
+
+      {/* =========================
+          VISIÓN
+      ========================= */}
 
       <motion.div
         className="info-card"
@@ -109,7 +117,10 @@ function Nosotros() {
         viewport={{ once: true }}
       >
         <div className="info-image">
-          <img src={nosotros} alt="Visión del Liceo Integral Joseph" />
+          <img
+            src={nosotros}
+            alt="Visión del Liceo Integral Joseph"
+          />
         </div>
 
         <div className="info-content">
@@ -126,7 +137,10 @@ function Nosotros() {
         </div>
       </motion.div>
 
-      {/* MISIÓN */}
+
+      {/* =========================
+          MISIÓN
+      ========================= */}
 
       <motion.div
         className="info-card reverse"
@@ -150,11 +164,17 @@ function Nosotros() {
         </div>
 
         <div className="info-image">
-          <img src={proposito} alt="Misión del Liceo Integral Joseph" />
+          <img
+            src={proposito}
+            alt="Misión del Liceo Integral Joseph"
+          />
         </div>
       </motion.div>
 
-      {/* FILOSOFÍA */}
+
+      {/* =========================
+          FILOSOFÍA
+      ========================= */}
 
       <motion.div
         className="filosofia"
@@ -183,7 +203,10 @@ function Nosotros() {
         </div>
       </motion.div>
 
-      {/* PRINCIPIOS */}
+
+      {/* =========================
+          PRINCIPIOS
+      ========================= */}
 
       <motion.div
         className="principios"
@@ -225,7 +248,10 @@ function Nosotros() {
         </div>
       </motion.div>
 
-      {/* FUNDAMENTACIÓN ESPIRITUAL */}
+
+      {/* =========================
+          FUNDAMENTACIÓN ESPIRITUAL
+      ========================= */}
 
       <motion.div
         className="espiritualidad"
@@ -236,7 +262,9 @@ function Nosotros() {
         <div className="espiritualidad-content">
           <span>FUNDAMENTACIÓN ESPIRITUAL</span>
 
-          <h3>Formación integral en el marco del Cristianismo</h3>
+          <h3>
+            Formación integral en el marco del Cristianismo
+          </h3>
 
           <p>
             La espiritualidad la consideramos como el modo de ser, pensar y
@@ -252,40 +280,100 @@ function Nosotros() {
         </div>
       </motion.div>
 
-      {/* PERFIL DEL ESTUDIANTE */}
 
-      <motion.div
-        className="perfil-estudiante"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-      >
-        <div className="perfil-header">
-          <span>PERFIL DEL ESTUDIANTE</span>
+      {/* =========================
+          PERFIL DEL ESTUDIANTE
+      ========================= */}
 
-          <h3>Estudiante de Preescolar</h3>
-        </div>
+      <div className="perfiles-estudiante">
 
-        <div className="perfil-content">
-          <h4>Dimensión espiritual</h4>
+        {/* PREESCOLAR */}
 
-          <ul>
-            <li>
-              Compartirá su cultura familiar, gustos y cultos, respetando las
-              individualidades del otro.
-            </li>
+        <motion.div
+          className="perfil-estudiante"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="perfil-header">
+            <span>PERFIL DEL ESTUDIANTE</span>
 
-            <li>
-              Será un ser individual en su mente, cuerpo y espíritu.
-            </li>
+            <h3>Estudiante de Preescolar</h3>
+          </div>
 
-            <li>
-              Reconocerá su dimensión espiritual para fundamentar criterios
-              de conocimiento.
-            </li>
-          </ul>
-        </div>
-      </motion.div>
+          <div className="perfil-content">
+
+            <h4>Dimensión espiritual</h4>
+
+            <ul>
+              <li>
+                Compartirá su cultura familiar, gustos y cultos,
+                respetando las individualidades del otro.
+              </li>
+
+              <li>
+                Será un ser individual en su mente, cuerpo y espíritu.
+              </li>
+
+              <li>
+                Reconocerá su dimensión espiritual para fundamentar
+                criterios de conocimiento.
+              </li>
+            </ul>
+
+          </div>
+        </motion.div>
+
+
+        {/* BÁSICA PRIMARIA */}
+
+        <motion.div
+          className="perfil-estudiante"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="perfil-header">
+            <span>PERFIL DEL ESTUDIANTE</span>
+
+            <h3>Estudiante de Básica Primaria</h3>
+          </div>
+
+          <div className="perfil-content">
+
+            <h4>Dimensión espiritual</h4>
+
+            <ul>
+              <li>
+                Reconocerá y respetará sus creencias y las de los demás,
+                fortaleciendo su relación consigo mismo, con su familia,
+                con la comunidad y con Dios.
+              </li>
+
+              <li>
+                Desarrollará principios éticos, morales y cristianos
+                que orienten sus decisiones y acciones en los diferentes
+                contextos de su vida.
+              </li>
+
+              <li>
+                Comprenderá la importancia de actuar con respeto,
+                solidaridad, responsabilidad, honestidad y compromiso
+                frente a los demás.
+              </li>
+
+              <li>
+                Fortalecerá su autonomía y pensamiento crítico para
+                tomar decisiones responsables y contribuir positivamente
+                a su entorno.
+              </li>
+            </ul>
+
+          </div>
+        </motion.div>
+
+      </div>
+
     </section>
   );
 }

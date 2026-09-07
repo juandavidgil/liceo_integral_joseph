@@ -15,6 +15,9 @@ import photo_13 from "../assets/gallery-13.jpeg";
 import photo_14 from "../assets/gallery-14.jpeg";
 import photo_15 from "../assets/gallery-15.jpeg";
 import photo_16 from "../assets/gallery-16.jpeg";
+import photo_17 from "../assets/gallery-17.jpeg"
+import photo_18 from "../assets/gallery-18.jpeg"
+import photo_19 from "../assets/gallery-19.jpeg"
 import "./css/Galeria.css";
 
 function Galeria() {
@@ -34,7 +37,10 @@ function Galeria() {
     photo_13,
     photo_14,
     photo_15,
-    photo_16
+    photo_16,
+    photo_17,
+    photo_18,
+    photo_19
   ];
 
   return (
