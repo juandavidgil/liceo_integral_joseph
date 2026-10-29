@@ -29,7 +29,7 @@ function Areas() {
       imagen: lengua,
     },
     {
-      nombre: "Ciencias Naturales y Educación Ambiental",
+      nombre: "Ciencias Naturales y Educación Ambiental", 
       imagen: ciencias,
     },
     {
