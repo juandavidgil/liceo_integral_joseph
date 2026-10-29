@@ -1,0 +1,560 @@
+
+/* ==============================
+   DESPEDIDA GRADO 5 - 2026
+============================== */
+
+.despedida {
+  --despedida-night: #11152e;
+  --despedida-purple: #41356f;
+  --despedida-gold: #e7c780;
+  --despedida-cream: #fffaf0;
+  --despedida-muted: #b8bdd0;
+
+  position: relative;
+  overflow: hidden;
+  padding: 115px 8%;
+  isolation: isolate;
+  color: var(--despedida-cream);
+  background:
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(91, 73, 145, 0.24),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 95% 75%,
+      rgba(231, 199, 128, 0.08),
+      transparent 30%
+    ),
+    var(--despedida-night);
+}
+
+.despedida::before,
+.despedida::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  border: 1px solid rgba(231, 199, 128, 0.12);
+  border-radius: 50%;
+}
+
+.despedida::before {
+  width: 480px;
+  height: 480px;
+  top: -300px;
+  left: -180px;
+  box-shadow:
+    0 0 0 35px rgba(231, 199, 128, 0.025),
+    0 0 0 75px rgba(231, 199, 128, 0.02);
+}
+
+.despedida::after {
+  width: 350px;
+  height: 350px;
+  right: -220px;
+  bottom: 15%;
+  box-shadow: 0 0 0 40px rgba(231, 199, 128, 0.025);
+}
+
+.despedida-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ENCABEZADO */
+
+.despedida-header {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.despedida-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+  color: var(--despedida-gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.despedida-label-line {
+  width: 30px;
+  height: 1px;
+  background: var(--despedida-gold);
+}
+
+.despedida-header h2 {
+  margin: 0;
+  color: var(--despedida-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 7vw, 6.2rem);
+  font-weight: 500;
+  letter-spacing: -3px;
+  line-height: 1.05;
+}
+
+.despedida-header h2 span {
+  display: block;
+  color: var(--despedida-gold);
+  font-style: italic;
+}
+
+.despedida-year {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.despedida-year span {
+  width: 55px;
+  height: 1px;
+  background: rgba(231, 199, 128, 0.55);
+}
+
+.despedida-year strong {
+  color: var(--despedida-gold);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 8px;
+}
+
+.despedida-header p {
+  max-width: 650px;
+  margin: 28px auto 0;
+  color: var(--despedida-muted);
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.despedida-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.despedida-separator span {
+  width: 45px;
+  height: 1px;
+  background: rgba(231, 199, 128, 0.4);
+}
+
+.despedida-separator i {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--despedida-gold);
+  transform: rotate(45deg);
+}
+
+/* MENSAJE DESTACADO */
+
+.despedida-message {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 28px;
+  padding: 28px 32px;
+  border: 1px solid rgba(231, 199, 128, 0.25);
+  border-left: 3px solid var(--despedida-gold);
+  background: linear-gradient(
+    110deg,
+    rgba(65, 53, 111, 0.55),
+    rgba(255, 255, 255, 0.025)
+  );
+}
+
+.despedida-message-symbol {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(231, 199, 128, 0.45);
+  border-radius: 50%;
+  color: var(--despedida-gold);
+  font-size: 1.4rem;
+}
+
+.despedida-message-content {
+  flex: 1;
+}
+
+.despedida-message-content > span {
+  color: var(--despedida-gold);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.despedida-message-content h3 {
+  margin: 8px 0 0;
+  color: var(--despedida-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.65rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.despedida-message-year {
+  color: rgba(231, 199, 128, 0.65);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+/* GALERÍA */
+
+.despedida-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 85px;
+  gap: 18px;
+}
+
+.despedida-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #292642;
+  border: 1px solid rgba(231, 199, 128, 0.16);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+}
+
+.despedida-card-1 {
+  grid-column: span 7;
+  grid-row: span 4;
+  border-radius: 3px 35px 3px 3px;
+}
+
+.despedida-card-2 {
+  grid-column: span 5;
+  grid-row: span 3;
+  border-radius: 3px;
+}
+
+.despedida-card-3 {
+  grid-column: span 5;
+  grid-row: span 3;
+  border-radius: 3px;
+}
+
+.despedida-card-4,
+.despedida-card-5 {
+  grid-column: span 6;
+  grid-row: span 3;
+  border-radius: 3px 3px 25px 3px;
+}
+
+.despedida-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.5s ease;
+}
+
+.despedida-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 14, 35, 0.05) 15%,
+    rgba(12, 14, 35, 0.15) 40%,
+    rgba(12, 14, 35, 0.9) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.despedida-card:hover img {
+  transform: scale(1.07);
+  filter: saturate(1.1);
+}
+
+/* CONTENIDO DE LAS TARJETAS */
+
+.despedida-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px;
+  color: white;
+}
+
+.despedida-card-number {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(231, 199, 128, 0.8);
+  border-radius: 50%;
+  background: rgba(17, 21, 46, 0.4);
+  color: var(--despedida-gold);
+  font-size: 0.7rem;
+  backdrop-filter: blur(8px);
+}
+
+.despedida-card-text {
+  max-width: calc(100% - 25px);
+}
+
+.despedida-card-text > span {
+  color: var(--despedida-gold);
+  font-size: 0.59rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.despedida-card-text h3 {
+  margin: 9px 0 0;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.15rem, 2vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.despedida-card-star {
+  position: absolute;
+  right: 23px;
+  bottom: 27px;
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(231, 199, 128, 0.7);
+  border-radius: 50%;
+  color: var(--despedida-gold);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.despedida-card:hover .despedida-card-star {
+  background: var(--despedida-gold);
+  color: var(--despedida-night);
+  transform: rotate(45deg);
+}
+
+/* FIRMA FINAL */
+
+.despedida-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 65px;
+  text-align: center;
+}
+
+.despedida-footer-decoration {
+  color: var(--despedida-gold);
+  font-size: 1.4rem;
+}
+
+.despedida-footer p {
+  margin: 0;
+  color: var(--despedida-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  letter-spacing: 2px;
+}
+
+.despedida-footer p span {
+  color: var(--despedida-gold);
+}
+
+.despedida-footer-caption {
+  color: var(--despedida-muted);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .despedida {
+    padding: 90px 5%;
+  }
+
+  .despedida-gallery {
+    grid-auto-rows: 70px;
+    gap: 14px;
+  }
+
+  .despedida-card-1 {
+    grid-column: span 7;
+    grid-row: span 4;
+  }
+
+  .despedida-card-2,
+  .despedida-card-3 {
+    grid-column: span 5;
+    grid-row: span 3;
+  }
+
+  .despedida-card-4,
+  .despedida-card-5 {
+    grid-column: span 6;
+    grid-row: span 3;
+  }
+}
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+  .despedida {
+    padding: 75px 5%;
+  }
+
+  .despedida-header {
+    margin-bottom: 40px;
+  }
+
+  .despedida-label {
+    gap: 8px;
+    font-size: 0.51rem;
+    letter-spacing: 1.2px;
+  }
+
+  .despedida-label-line {
+    width: 15px;
+  }
+
+  .despedida-header h2 {
+    font-size: clamp(2.7rem, 12vw, 3.7rem);
+    letter-spacing: -1.5px;
+  }
+
+  .despedida-header p {
+    font-size: 0.91rem;
+    line-height: 1.8;
+  }
+
+  .despedida-message {
+    gap: 13px;
+    padding: 20px 15px;
+  }
+
+  .despedida-message-symbol {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .despedida-message-content > span {
+    font-size: 0.48rem;
+    letter-spacing: 1px;
+  }
+
+  .despedida-message-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .despedida-message-year {
+    display: none;
+  }
+
+  .despedida-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 12px;
+  }
+
+  .despedida-card-1 {
+    grid-column: span 2;
+    aspect-ratio: 5 / 4;
+  }
+
+  .despedida-card-2,
+  .despedida-card-3,
+  .despedida-card-4,
+  .despedida-card-5 {
+    grid-column: span 1;
+    aspect-ratio: 3 / 4;
+  }
+
+  .despedida-card-overlay {
+    padding: 12px;
+  }
+
+  .despedida-card-number {
+    width: 30px;
+    height: 30px;
+    font-size: 0.6rem;
+  }
+
+  .despedida-card-text {
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .despedida-card-text > span {
+    font-size: 0.45rem;
+    letter-spacing: 0.7px;
+  }
+
+  .despedida-card-text h3 {
+    font-size: 0.95rem;
+  }
+
+  .despedida-card-star {
+    right: 10px;
+    bottom: 10px;
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+
+  .despedida-footer {
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .despedida-footer p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+
+  .despedida-footer-caption {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  .despedida-card img,
+  .despedida-card-star {
+    transition: none;
+  }
+
+  .despedida-card:hover img,
+  .despedida-card:hover .despedida-card-star {
+    transform: none;
+  }
+}

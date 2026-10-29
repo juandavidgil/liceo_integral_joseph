@@ -8,6 +8,8 @@ import Contacto from "./componentes/Contacto";
 import Areas from "./componentes/Areas";
 import Nosotros from "./componentes/Nosotros";
 import Galeria from "./componentes/Galeria";
+import Cultural from "./componentes/Cultural";
+import Despedida from "./componentes/Despedida";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Areas />
       <Nosotros />
       <Galeria />
+      <Cultural />
+      <Despedida />
       <Contacto />
       <Footer />
     </div>
