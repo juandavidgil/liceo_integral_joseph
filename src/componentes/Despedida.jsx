@@ -1,9 +1,9 @@
 
-import Despedida1 from "../assets/Despedida1.jpeg";
-import Despedida2 from "../assets/Despedida2.jpeg";
-import Despedida3 from "../assets/Despedida3.jpeg";
-import Despedida4 from "../assets/Despedida4.jpeg";
-import Despedida5 from "../assets/Despedida5.jpeg";
+import Despedida1 from "../assets/despedida1.jpeg";
+import Despedida2 from "../assets/despedida2.jpeg";
+import Despedida3 from "../assets/despedida3.jpeg";
+import Despedida4 from "../assets/despedida4.jpeg";
+import Despedida5 from "../assets/despedida5.jpeg";
 
 import "./css/Despedida.css";
 import { motion } from "framer-motion";
