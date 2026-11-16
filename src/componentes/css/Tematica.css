@@ -1,0 +1,504 @@
+
+/* ==============================
+   TEMÁTICA
+============================== */
+
+.tematica {
+  --tematica-blue: #36a9e1;
+  --tematica-yellow: #ffd45c;
+  --tematica-pink: #ff8fa3;
+  --tematica-green: #75c9a5;
+  --tematica-navy: #263b63;
+  --tematica-muted: #718096;
+
+  position: relative;
+  overflow: hidden;
+  padding: 110px 8%;
+  background: #fffaf1;
+  color: var(--tematica-navy);
+  isolation: isolate;
+}
+
+.tematica::before,
+.tematica::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tematica::before {
+  width: 350px;
+  height: 350px;
+  top: -160px;
+  left: -130px;
+  background: rgba(54, 169, 225, 0.09);
+}
+
+.tematica::after {
+  width: 400px;
+  height: 400px;
+  right: -200px;
+  bottom: 0;
+  background: rgba(255, 212, 92, 0.12);
+}
+
+.tematica-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ENCABEZADO */
+
+.tematica-header {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.tematica-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #3299ce;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tematica-header h2 {
+  margin: 0;
+  color: var(--tematica-navy);
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.12;
+}
+
+.tematica-header h2 span {
+  display: block;
+  color: #f29a47;
+}
+
+.tematica-header p {
+  max-width: 650px;
+  margin: 24px auto 0;
+  color: var(--tematica-muted);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.tematica-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.tematica-divider span {
+  width: 45px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--tematica-yellow);
+}
+
+.tematica-divider i {
+  color: #f3a23e;
+  font-size: 1.1rem;
+  font-style: normal;
+}
+
+/* FRANJA INFORMATIVA */
+
+.tematica-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 25px 32px;
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 24px;
+  background: linear-gradient(110deg, #36a9e1, #65c4d9);
+  color: white;
+  box-shadow: 0 12px 30px rgba(54, 169, 225, 0.17);
+}
+
+.tematica-info-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  background: var(--tematica-yellow);
+  color: #74551b;
+  font-size: 2rem;
+}
+
+.tematica-info-text {
+  flex: 1;
+}
+
+.tematica-info-text span {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.tematica-info h3 {
+  margin: 5px 0 0;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.tematica-info-stars {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #ffdf79;
+  font-size: 2rem;
+}
+
+.tematica-info-stars span:nth-child(2) {
+  font-size: 1.4rem;
+}
+
+/* GALERÍA */
+
+.tematica-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 90px;
+  gap: 18px;
+}
+
+.tematica-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 5px solid white;
+  border-radius: 24px;
+  background: #dbeafe;
+  box-shadow: 0 9px 25px rgba(38, 59, 99, 0.09);
+  transform: translateZ(0);
+}
+
+.tematica-card:nth-child(1) {
+  grid-column: span 7;
+  grid-row: span 4;
+}
+
+.tematica-card:nth-child(2) {
+  grid-column: span 5;
+  grid-row: span 4;
+}
+
+.tematica-card:nth-child(n + 3) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.tematica-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.tematica-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 35, 60, 0.02) 15%,
+    rgba(20, 35, 60, 0.12) 40%,
+    rgba(20, 35, 60, 0.83) 100%
+  );
+  transition: opacity 0.4s ease;
+}
+
+.tematica-card:hover img {
+  transform: scale(1.09);
+}
+
+/* COLORES DE LAS TARJETAS */
+
+.tematica-blue {
+  border-color: #a9e3ff;
+}
+
+.tematica-yellow {
+  border-color: #ffe49b;
+}
+
+.tematica-pink {
+  border-color: #ffc0cb;
+}
+
+.tematica-green {
+  border-color: #a9e8cb;
+}
+
+.tematica-orange {
+  border-color: #ffd0a6;
+}
+
+.tematica-purple {
+  border-color: #d9c4ff;
+}
+
+/* TEXTO DE LAS FOTOGRAFÍAS */
+
+.tematica-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+
+.tematica-card-number {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border: 2px solid white;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.tematica-card-text {
+  max-width: calc(100% - 30px);
+}
+
+.tematica-card-text > span {
+  color: #ffe28a;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.tematica-card-text h3 {
+  margin: 7px 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.tematica-card-star {
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+  color: #ffdf79;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.tematica-card:hover .tematica-card-star {
+  transform: rotate(25deg) scale(1.3);
+}
+
+/* FIRMA */
+
+.tematica-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 50px;
+}
+
+.tematica-footer p {
+  margin: 0;
+  color: var(--tematica-navy);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.tematica-footer p span {
+  color: #f3a23e;
+}
+
+.tematica-footer-line {
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--tematica-pink);
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .tematica {
+    padding: 85px 5%;
+  }
+
+  .tematica-gallery {
+    grid-auto-rows: 75px;
+    gap: 14px;
+  }
+
+  .tematica-card:nth-child(1) {
+    grid-column: span 7;
+    grid-row: span 4;
+  }
+
+  .tematica-card:nth-child(2) {
+    grid-column: span 5;
+    grid-row: span 4;
+  }
+
+  .tematica-card:nth-child(n + 3) {
+    grid-column: span 6;
+    grid-row: span 3;
+  }
+}
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+  .tematica {
+    padding: 70px 5%;
+  }
+
+  .tematica-header {
+    margin-bottom: 38px;
+  }
+
+  .tematica-eyebrow {
+    font-size: 0.59rem;
+    letter-spacing: 1px;
+  }
+
+  .tematica-header h2 {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    letter-spacing: -1.2px;
+  }
+
+  .tematica-header p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+
+  .tematica-info {
+    gap: 12px;
+    padding: 18px 14px;
+    border-radius: 18px;
+  }
+
+  .tematica-info-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    font-size: 1.5rem;
+  }
+
+  .tematica-info-text span {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+  }
+
+  .tematica-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .tematica-info-stars {
+    gap: 5px;
+    font-size: 1.3rem;
+  }
+
+  .tematica-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 12px;
+  }
+
+  .tematica-card {
+    border-width: 3px;
+    border-radius: 18px;
+  }
+
+  .tematica-card:nth-child(1),
+  .tematica-card:nth-child(2) {
+    grid-column: span 2;
+    aspect-ratio: 5 / 3;
+  }
+
+  .tematica-card:nth-child(n + 3) {
+    grid-column: span 1;
+    aspect-ratio: 3 / 4;
+  }
+
+  .tematica-card-overlay {
+    padding: 12px;
+  }
+
+  .tematica-card-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 0.62rem;
+  }
+
+  .tematica-card-text {
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
+
+  .tematica-card-text > span {
+    font-size: 0.47rem;
+    letter-spacing: 0.7px;
+  }
+
+  .tematica-card-text h3 {
+    font-size: 0.95rem;
+  }
+
+  .tematica-card-star {
+    right: 10px;
+    bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .tematica-footer {
+    gap: 9px;
+    margin-top: 35px;
+  }
+
+  .tematica-footer p {
+    font-size: 0.52rem;
+    letter-spacing: 0.7px;
+  }
+
+  .tematica-footer-line {
+    width: 18px;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  .tematica-card img,
+  .tematica-card-star {
+    transition: none;
+  }
+
+  .tematica-card:hover img {
+    transform: none;
+  }
+}

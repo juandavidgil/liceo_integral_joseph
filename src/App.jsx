@@ -9,7 +9,9 @@ import Areas from "./componentes/Areas";
 import Nosotros from "./componentes/Nosotros";
 import Galeria from "./componentes/Galeria";
 import Cultural from "./componentes/Cultural";
+
 import Despedida from "./componentes/Despedida";
+import Tematica from "./componentes/Tematica";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
       <Galeria />
       <Cultural />
       <Despedida />
+      <Tematica />
       <Contacto />
       <Footer />
     </div>
