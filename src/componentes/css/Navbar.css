@@ -1,157 +1,320 @@
+
+/* ==============================
+   NAVBAR - LICEO INTEGRAL JOSEPH
+============================== */
+
 /* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-:root{
-  --primary:#1E3A8A;
-  --secondary:#2563EB;
-  --white:#ffffff;
-  --text:#1f2937;
+:root {
+  --primary: #1E3A8A;
+  --secondary: #2563EB;
+  --white: #ffffff;
+  --text: #1f2937;
+  --nav-shadow: 0 8px 30px rgba(30, 58, 138, 0.08);
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+/* TIPOGRAFÍA */
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
-.navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:60px;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  padding:0 7%;
-
-  z-index:1000;
-
-  background:rgba(255,255,255,0.85);
-
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-
-  border-bottom:1px solid rgba(255,255,255,.3);
-
-  transition:.4s ease;
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+  box-shadow: var(--nav-shadow);
+  transition: 0.4s ease;
 }
 
-.logo{
-  font-size:1.4rem;
-  font-weight:700;
-  color:var(--primary);
-  cursor:pointer;
+/* LOGO */
+.logo {
+  flex-shrink: 0;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+  letter-spacing: -0.5px;
 }
 
-.nav-links{
-  display:flex;
-  gap:35px;
-  list-style:none;
+.logo span {
+  position: relative;
 }
 
-.nav-links a{
-  position:relative;
-  text-decoration:none;
-  color:var(--text);
-  font-weight:500;
-  transition:.3s;
+.logo span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: logoLine 1.2s ease forwards;
+  animation-delay: 0.8s;
 }
 
-.nav-links a:hover{
-  color:var(--secondary);
+@keyframes logoLine {
+  to {
+    transform: scaleX(1);
+  }
 }
 
-.nav-links a::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:-8px;
-
-  width:0;
-  height:3px;
-
-  border-radius:10px;
-  background:linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary)
-  );
-
-  transition:.35s;
+/* NAVEGACIÓN */
+.navbar-nav {
+  display: flex;
+  align-items: center;
 }
 
-.nav-links a:hover::after{
-  width:100%;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.active-link{
-  color:var(--secondary)!important;
+.nav-links li {
+  list-style: none;
 }
 
-.active-link::after{
-  width:100% !important;
+.nav-links a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.83rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.contact-btn{
-  border:none;
-  cursor:pointer;
-
-  padding:12px 24px;
-
-  border-radius:30px;
-
-  background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--secondary)
-  );
-
-  color:white;
-  font-weight:600;
-
-  transition:.4s;
+.nav-links a:hover {
+  color: var(--secondary);
 }
 
-.contact-btn:hover{
-  box-shadow:
-    0 10px 25px rgba(37,99,235,.35);
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.35s ease;
 }
 
-/* ANIMACIÓN LOGO */
-
-.logo span{
-  position:relative;
+.nav-links a:hover::after {
+  width: 100%;
 }
 
-.logo span::after{
-  content:'';
-  position:absolute;
-
-  left:0;
-  bottom:-5px;
-
-  width:100%;
-  height:3px;
-
-  background:linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary)
-  );
-
-  transform:scaleX(0);
-  transform-origin:left;
-
-  animation:logoLine 1.2s ease forwards;
-  animation-delay:.8s;
+/* BOTÓN CONTACTO */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+  border: none;
+  cursor: pointer;
+  padding: 12px 23px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: 0.3s ease;
 }
 
-@keyframes logoLine{
-  to{
-    transform:scaleX(1);
+.contact-btn span {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.contact-btn:hover span {
+  transform: translate(3px, -3px);
+}
+
+.mobile-contact {
+  display: none;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  width: 43px;
+  height: 43px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 12px;
+  background: #eff5ff;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 23px;
+  height: 2.5px;
+  border-radius: 5px;
+  background: var(--primary);
+  transition: 0.35s ease;
+}
+
+/* ANIMACIÓN HAMBURGUESA */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* TABLET Y MÓVILES */
+@media (max-width: 1000px) {
+  .navbar {
+    min-height: 68px;
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .desktop-contact {
+    display: none;
+  }
+
+  /* MENÚ DESPLEGABLE */
+  .navbar-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 6%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+    box-shadow: 0 15px 25px rgba(30, 58, 138, 0.08);
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.45s ease,
+      opacity 0.3s ease,
+      padding 0.35s ease,
+      visibility 0.35s;
+  }
+
+  .navbar-nav.menu-abierto {
+    max-height: 600px;
+    padding: 15px 6% 25px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(30, 58, 138, 0.07);
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 13px 5px;
+    font-size: 0.92rem;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a:hover {
+    padding-left: 12px;
+  }
+
+  .mobile-contact {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+  }
+}
+
+/* MÓVILES PEQUEÑOS */
+@media (max-width: 400px) {
+  .navbar {
+    min-height: 64px;
+    padding: 0 4%;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ACCESIBILIDAD */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .logo span::after,
+  .nav-links a,
+  .nav-links a::after,
+  .contact-btn,
+  .contact-btn span,
+  .menu-toggle span,
+  .navbar-nav {
+    animation: none;
+    transition: none;
   }
 }
